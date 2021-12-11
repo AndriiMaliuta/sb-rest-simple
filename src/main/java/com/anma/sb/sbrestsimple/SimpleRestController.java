@@ -1,14 +1,14 @@
 package com.anma.sb.sbrestsimple;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@org.springframework.web.bind.annotation.RestController
-public class RestController {
+@RestController
+public class SimpleRestController {
 
     static List<Cat> cats = List.of(new Cat("Murz", 5), new Cat("Murko", 7));
-
 
     @GetMapping("/")
     public String home() {
